@@ -17,7 +17,7 @@ $production2 = new Production("Titanic", "english", "8", $drama);
 $production3 = new Production("San Andreas", "english", "6", $action);
 $production4 = new Production("Dune", "english", "9", $fantasy);
 $production5 = new Production("Matrix", "english", "8", $action);
-$production6 = new Production("Star wars", "english", "10", $action);
+$production6 = new Production("Star wars", "english", "10", new Genre(["action", "scifi", "fantasy"], "suuuupercool"));
 //var_dump($production1, $production2, $production3, $production4, $production5, $production6);
 
 //array di produzioni
