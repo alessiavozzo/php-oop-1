@@ -1,13 +1,15 @@
 <?php
 
+require_once __DIR__ . "/Genre.php";
 //definisco la class Production
 class Production
 {
-    public function __construct(public string $title, public string $language, public string $rating)
+    public function __construct(public string $title, public string $language, public string $rating, public Genre $genre)
     {
         $this->title = $title;
         $this->language = $language;
         $this->setRating($rating);
+        $this->genre = $genre;
     }
 
     public function setRating($rating)
