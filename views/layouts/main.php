@@ -12,22 +12,16 @@
                             <div class="card-body text-light">
                                 <h5 class="card-title text-center"><?php echo $production->title ?></h5>
 
-                                <!-- need to loop here if genre->name is array -->
-                                <?php if (is_array($production->genre->name)) : ?>
-                                    <h6 class="card-subtitle mb-2 text-secondary">
-                                        Genres:
+                                <h6 class="card-subtitle mb-2 text-secondary">
+                                    Genres:
+                                    <?php foreach ($production->genre as $genre) : ?>
+                                        <div class="genre">
+                                            <span><?php echo "$genre->name : " ?></span>
+                                            <span><?php echo $genre->description ?></span>
+                                        </div>
+                                    <?php endforeach; ?>
 
-                                        <?php foreach ($production->genre->name as $genreName) : ?>
-                                            <span><?php echo "$genreName," ?></span>
-                                        <?php endforeach; ?>
-
-                                    </h6>
-                                <?php else : ?>
-                                    <h6 class="card-subtitle mb-2 text-secondary ">
-                                        Genres: <span><?php echo $production->genre->name ?></span>
-                                    </h6>
-                                <?php endif; ?>
-                                <p class="card-text"><strong>Genre description: </strong><?php echo $production->genre->description ?></p>
+                                </h6>
                                 <p class="card-text"><strong>Rating: </strong><?php echo $production->rating ?>/10</p>
                                 <p class="card-text"><strong>Language: </strong><?php echo $production->language ?></p>
                             </div>
@@ -52,22 +46,16 @@
                             <div class="card-body text-light">
                                 <h5 class="card-title text-center"><?php echo $movie->title ?></h5>
 
-                                <!-- need to loop here if genre->name is array -->
-                                <?php if (is_array($movie->genre->name)) : ?>
-                                    <h6 class="card-subtitle mb-2 text-secondary">
-                                        Genres:
+                                <h6 class="card-subtitle mb-2 text-secondary">
+                                    Genres:
+                                    <?php foreach ($movie->genre as $genre) : ?>
+                                        <div class="genre">
+                                            <span><?php echo "$genre->name : " ?></span>
+                                            <span><?php echo $genre->description ?></span>
+                                        </div>
+                                    <?php endforeach; ?>
 
-                                        <?php foreach ($movie->genre->name as $genreName) : ?>
-                                            <span><?php echo "$genreName," ?></span>
-                                        <?php endforeach; ?>
-
-                                    </h6>
-                                <?php else : ?>
-                                    <h6 class="card-subtitle mb-2 text-secondary ">
-                                        Genres: <span><?php echo $movie->genre->name ?></span>
-                                    </h6>
-                                <?php endif; ?>
-                                <p class="card-text"><strong>Genre description: </strong><?php echo $movie->genre->description ?></p>
+                                </h6>
                                 <p class="card-text"><strong>Rating: </strong><?php echo $movie->rating ?>/10</p>
                                 <p class="card-text"><strong>Language: </strong><?php echo $movie->language ?></p>
                                 <p class="card-text"><strong>Profit: </strong><?php echo $movie->getProfit() ?></p>
@@ -94,22 +82,16 @@
                             <div class="card-body text-light">
                                 <h5 class="card-title text-center"><?php echo $serie->title ?></h5>
 
-                                <!-- need to loop here if genre->name is array -->
-                                <?php if (is_array($serie->genre->name)) : ?>
-                                    <h6 class="card-subtitle mb-2 text-secondary">
-                                        Genres:
+                                <h6 class="card-subtitle mb-2 text-secondary">
+                                    Genres:
+                                    <?php foreach ($serie->genre as $genre) : ?>
+                                        <div class="genre">
+                                            <span><?php echo "$genre->name : " ?></span>
+                                            <span><?php echo $genre->description ?></span>
+                                        </div>
+                                    <?php endforeach; ?>
 
-                                        <?php foreach ($serie->genre->name as $genreName) : ?>
-                                            <span><?php echo "$genreName," ?></span>
-                                        <?php endforeach; ?>
-
-                                    </h6>
-                                <?php else : ?>
-                                    <h6 class="card-subtitle mb-2 text-secondary ">
-                                        Genres: <span><?php echo $serie->genre->name ?></span>
-                                    </h6>
-                                <?php endif; ?>
-                                <p class="card-text"><strong>Genre description: </strong><?php echo $serie->genre->description ?></p>
+                                </h6>
                                 <p class="card-text"><strong>Rating: </strong><?php echo $serie->rating ?>/10</p>
                                 <p class="card-text"><strong>Language: </strong><?php echo $serie->language ?></p>
                                 <p class="card-text"><strong>Stagioni: </strong><?php echo $serie->seasons ?></p>
