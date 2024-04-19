@@ -9,6 +9,11 @@ class Movie extends Production
         parent::__construct($title, $language, $rating, $genre);
     }
 
+    public function setProfit($profit)
+    {
+        $this->profit = $profit * 100;
+    }
+
     public function getProfit()
     {
         return $this->profit . "$";

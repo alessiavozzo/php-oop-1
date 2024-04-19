@@ -2,6 +2,8 @@
 
 //importo la classe Production
 require_once __DIR__ . "/models/Production.php";
+require_once __DIR__ . "/models/Movie.php";
+require_once __DIR__ . "/models/TvSerie.php";
 require_once __DIR__ . "/models/Genre.php";
 
 //istanzio x oggetti per il genere
@@ -23,3 +25,13 @@ $production6 = new Production("Star wars", "english", "10", new Genre(["action",
 //array di produzioni
 $productionsList = array($production1, $production2, $production3, $production4, $production5, $production6);
 //var_dump($productionsList);
+
+
+$movie = new Movie(
+    "Avatar",
+    "en",
+    "10",
+    new Genre(["fantasy, action"], "add genre description"),
+    20,
+    145
+);
